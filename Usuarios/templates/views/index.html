@@ -1,0 +1,35 @@
+{% include "views/default/header.html" %}
+{% load static %}
+<div class="sheetslider sh--default">
+    <input id="s1" type="radio" name="slide1" cheked />
+    <input id="s2" type="radio" name="slide2"  />
+    <div class="sh__content">
+        <div class="sh__item">
+            <img src="{% static 'images/Logo Cuadrado.png' %}" alt="imgText" class="imgSlider"/>
+            <div class="sh__meta">
+                <h4>Mercancia</h4>
+                <span>Venta de Ropa para tallas grandes
+                    <a href="#urlPage">Link</a>
+                </span>
+            </div>
+        </div>
+        <div class="sh__item">
+            <img src="{% static 'images/H1F.png' %}" alt="imgText" class="imgSlider"/>
+            <div class="sh__meta">
+                <h4>Mercancia</h4>
+                <span>Venta de Ropa para tallas normales
+                    <a href="#urlPage">Link</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="sh__btns">
+        <label for="s1"></label>
+        <label for="s2"></label>
+    </div>
+    <div class="sh__arrows">
+        <label for="s1"></label>
+        <label for="s2"></label>
+    </div>
+</div>
+{% include "views/default/footer.html" %}

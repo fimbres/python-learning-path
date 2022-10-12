@@ -1,0 +1,26 @@
+{% include "views/default/header.html" %}
+<div class="container">
+    <div class="row">
+        {% if ropa_list %}
+        {% for prenda in ropa_list %}
+        <div class="card">
+            <div class="card-header">
+                <a href="{{ prenda.Ropa_ID }}">
+                    <img src="{{ prenda.Imagen }}" class="thumbnail" />
+                </a>
+            </div>
+            <div class="card-body">
+                <h5>{{ prenda.Nombre }}</h5>
+                <p class="card-text">{{ prenda.Descrpcion }}
+                <h5>${{ prenda.Costo }}</h5>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <h2>No hay prendas disponibles</h2>
+    {% endif %}
+</div>
+</div>
+{% include "views/default/footer.html" %}
